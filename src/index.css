@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --page-width: 1160px;
+  --radius-lg: 1.05rem;
+  --radius-xl: 1.35rem;
+  --radius-xxl: 1.9rem;
+
+  --bg: #fbf7f1;
+  --bg-alt: #f3f7f4;
+  --surface: rgba(255, 251, 246, 0.86);
+  --text-strong: #203334;
+  --text-soft: #435a5a;
+  --text-muted: #6d7e7c;
+  --primary: #1d6a67;
+  --accent: #bb7b4c;
+
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-heading: "Fraunces", Georgia, serif;
+
+  color: var(--text-soft);
+  background:
+    radial-gradient(circle at top left, rgba(139, 201, 193, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbf7f1 0%, #f8f4ee 42%, #f3f7f4 100%);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-family: var(--font-heading);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+h1 {
+  font-size: clamp(2.9rem, 6vw, 5.1rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 3.15rem);
+}
+
+h3 {
+  font-size: 1.22rem;
+}
+
+p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+button {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(187, 123, 76, 0.18);
+  color: var(--text-strong);
+}
