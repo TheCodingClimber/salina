@@ -183,10 +183,11 @@ export default function CertsPage() {
           <div className="page-frame page-intro-card cert-page-hero">
             <div className="page-intro-copy">
               <p className="eyebrow">Certifications</p>
-              <h1>Credentials displayed clearly, professionally, and with care.</h1>
+              <h1>Professional certifications and supporting credentials.</h1>
               <p className="hero-copy">
-                This page provides a polished view of Salina&apos;s supporting certifications so
-                patients, families, and care teams can review professional background with confidence.
+                This page provides direct access to Salina&apos;s certification documents for patients,
+                families, providers, and care coordinators who would like to review supporting
+                credentials before scheduling service.
               </p>
 
               <div className="hero-actions">
