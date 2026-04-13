@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/certifications",
+      "destination": "/certifications.html",
+      "permanent": false
+    }
+  ]
+}
