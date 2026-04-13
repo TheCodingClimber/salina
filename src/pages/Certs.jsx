@@ -233,9 +233,9 @@ export default function CertsPage() {
           <div className="page-frame care-layout">
             <div className="care-panel">
               <SectionHeading
-                eyebrow="Why it helps"
-                title="Visible credentials can make mobile care feel more trustworthy before the first visit."
-                copy="A dedicated credentials page gives patients and care coordinators a clear place to verify training and review supporting documentation."
+                eyebrow="Professional overview"
+                title="Credentials available for review before service."
+                copy="Patients, families, providers, and care coordinators may review supporting documentation here as part of the scheduling and verification process."
               />
 
               <ul className="highlight-list">
@@ -243,35 +243,35 @@ export default function CertsPage() {
                   <span className="highlight-icon">
                     <Icons.Shield />
                   </span>
-                  <span>Professional background is easy to review without cluttering the main landing page.</span>
+                  <span>Certification documents are organized in one place for straightforward review.</span>
                 </li>
                 <li>
                   <span className="highlight-icon">
                     <Icons.Shield />
                   </span>
-                  <span>Actual certificate PDFs are available to open or download from the live site.</span>
+                  <span>Supporting credentials may be viewed online or downloaded as PDF files.</span>
                 </li>
                 <li>
                   <span className="highlight-icon">
                     <Icons.Shield />
                   </span>
-                  <span>The layout stays polished and medical without feeling cold or overly technical.</span>
+                  <span>This page helps confirm training background before home, office, or facility visits.</span>
                 </li>
               </ul>
             </div>
 
             <aside className="experience-card">
-              <p className="eyebrow">Quick summary</p>
-              <h2>Professional training, visible in one place.</h2>
+              <p className="eyebrow">Documentation</p>
+              <h2>Supporting records available when needed.</h2>
               <p>
-                Keeping certifications on a dedicated page lets the main site stay warm and approachable
-                while still giving visitors a direct path to the documents they may want to review.
+                This dedicated page makes professional background easy to verify while keeping service
+                details and scheduling information separate on the main site.
               </p>
 
               <div className="chip-row">
-                <span className="detail-chip">Phlebotomy certifications displayed</span>
-                <span className="detail-chip">CPR certification displayed</span>
-                <span className="detail-chip">Direct open and download links</span>
+                <span className="detail-chip">Phlebotomy documentation available</span>
+                <span className="detail-chip">CPR certification available</span>
+                <span className="detail-chip">PDF view and download access</span>
               </div>
             </aside>
           </div>
