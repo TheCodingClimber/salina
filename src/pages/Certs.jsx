@@ -230,50 +230,33 @@ export default function CertsPage() {
         </section>
 
         <section className="section section-wash">
-          <div className="page-frame care-layout">
-            <div className="care-panel">
-              <SectionHeading
-                eyebrow="Professional overview"
-                title="Credentials available for review before service."
-                copy="Patients, families, providers, and care coordinators may review supporting documentation here as part of the scheduling and verification process."
-              />
+          <div className="page-frame">
+            <SectionHeading
+              eyebrow="Professional overview"
+              title="Credentials available for review before service."
+              copy="Patients, families, providers, and care coordinators may review supporting documentation here as part of the scheduling and verification process."
+            />
 
-              <ul className="highlight-list">
-                <li>
-                  <span className="highlight-icon">
-                    <Icons.Shield />
-                  </span>
-                  <span>Certification documents are organized in one place for straightforward review.</span>
-                </li>
-                <li>
-                  <span className="highlight-icon">
-                    <Icons.Shield />
-                  </span>
-                  <span>Supporting credentials may be viewed online or downloaded as PDF files.</span>
-                </li>
-                <li>
-                  <span className="highlight-icon">
-                    <Icons.Shield />
-                  </span>
-                  <span>This page helps confirm training background before home, office, or facility visits.</span>
-                </li>
-              </ul>
-            </div>
-
-            <aside className="experience-card">
-              <p className="eyebrow">Documentation</p>
-              <h2>Supporting records available when needed.</h2>
-              <p>
-                This dedicated page makes professional background easy to verify while keeping service
-                details and scheduling information separate on the main site.
-              </p>
-
-              <div className="chip-row">
-                <span className="detail-chip">Phlebotomy documentation available</span>
-                <span className="detail-chip">CPR certification available</span>
-                <span className="detail-chip">PDF view and download access</span>
-              </div>
-            </aside>
+            <ul className="highlight-list">
+              <li>
+                <span className="highlight-icon">
+                  <Icons.Shield />
+                </span>
+                <span>Certification documents are organized in one place for straightforward review.</span>
+              </li>
+              <li>
+                <span className="highlight-icon">
+                  <Icons.Shield />
+                </span>
+                <span>Supporting credentials may be viewed online or downloaded as PDF files.</span>
+              </li>
+              <li>
+                <span className="highlight-icon">
+                  <Icons.Shield />
+                </span>
+                <span>This page helps confirm training background before home, office, or facility visits.</span>
+              </li>
+            </ul>
           </div>
         </section>
       </main>
