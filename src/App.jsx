@@ -13,6 +13,9 @@ const CONFIG = {
   blsCertified: false,
 };
 
+const AVAILABILITY_MAILTO = `mailto:${CONFIG.email}?subject=${encodeURIComponent("Check Availability")}`;
+const CERTIFICATIONS_ROUTE = "./certifications.html";
+
 const trustStats = [
   { value: "27+", label: "Years of hands-on phlebotomy experience" },
   { value: "Home + Office", label: "Care delivered where patients feel most comfortable" },
@@ -54,9 +57,9 @@ const serviceCards = [
 ];
 
 const careHighlights = [
-  "Soft, reassuring presentation for patients who do not do well with busy clinic environments.",
-  "Modern medical polish without looking cold, sterile, or intimidating.",
-  "Clear emphasis on home-visit convenience, physician-order readiness, and professional specimen handling.",
+  "Comfortable, professional visits for patients who prefer care in familiar surroundings.",
+  "Organized mobile service built around physician orders, specimen handling, and dependable communication.",
+  "A reassurance-first approach for homebound, pediatric, senior, and anxious patients.",
 ];
 
 const processSteps = [
@@ -130,7 +133,7 @@ const faqs = [
   {
     question: "How is pricing determined?",
     answer:
-      "Pricing depends on service type, travel, and scheduling needs. Call or email for a quote based on the visit details.",
+      "Mobile visits typically start at $50+, with final pricing based on service type, travel, and scheduling needs. Call or email to confirm the visit details.",
   },
 ];
 
@@ -161,12 +164,6 @@ const Icons = {
     <IconBase>
       <rect x="3" y="5" width="18" height="14" rx="2" />
       <path d="m4 7 8 6 8-6" />
-    </IconBase>
-  ),
-  Arrow: () => (
-    <IconBase>
-      <path d="M5 12h14" />
-      <path d="m13 5 7 7-7 7" />
     </IconBase>
   ),
   Shield: () => (
@@ -292,13 +289,14 @@ export default function App() {
               <a href="#services">Services</a>
               <a href="#process">How It Works</a>
               <a href="#about">About</a>
+              <a href={CERTIFICATIONS_ROUTE}>Certifications</a>
               <a href="#faq">FAQ</a>
             </nav>
 
             <div className="header-actions">
-              <a className="header-link" href={`mailto:${CONFIG.email}`}>
+              <a className="header-link" href={AVAILABILITY_MAILTO}>
                 <Icons.Mail />
-                <span>Email</span>
+                <span>Check Availability</span>
               </a>
               <a className="button button-primary button-compact" href={CONFIG.phoneTel}>
                 <Icons.Phone />
@@ -328,9 +326,9 @@ export default function App() {
                     <Icons.Phone />
                     <span>Call {CONFIG.phone}</span>
                   </a>
-                  <a className="button button-secondary" href={`mailto:${CONFIG.email}`}>
+                  <a className="button button-secondary" href={AVAILABILITY_MAILTO}>
                     <Icons.Mail />
-                    <span>Email Availability</span>
+                    <span>Check Availability</span>
                   </a>
                 </div>
 
@@ -377,7 +375,7 @@ export default function App() {
               <SectionHeading
                 eyebrow="Services"
                 title="Care designed to feel smooth, coordinated, and genuinely reassuring."
-                copy="This direction favors softer contrast, warmer surfaces, and more breathing room while still keeping a modern medical tone."
+                copy="Mobile phlebotomy services designed to feel organized, reassuring, and easy to arrange."
               />
 
               <div className="service-grid">
@@ -386,10 +384,6 @@ export default function App() {
                     <span className="service-label">{card.label}</span>
                     <h3>{card.title}</h3>
                     <p>{card.copy}</p>
-                    <div className="service-link">
-                      <span>Built for comfort and convenience</span>
-                      <Icons.Arrow />
-                    </div>
                   </article>
                 ))}
               </div>
@@ -400,9 +394,9 @@ export default function App() {
             <div className="page-frame care-layout">
               <div className="care-panel">
                 <SectionHeading
-                  eyebrow="Why this direction works"
-                  title="A softer visual language can make the service feel more trustworthy and approachable."
-                  copy="Compared with the sharper lab concept, this version leans into reassurance, comfort, and calm professionalism."
+                  eyebrow="Patient experience"
+                  title="Care that feels calmer, more private, and easier to fit into daily life."
+                  copy="Mobile visits allow patients to receive professional specimen collection in a familiar setting, with less waiting, less stress, and more convenience."
                 />
 
                 <ul className="highlight-list">
@@ -419,10 +413,10 @@ export default function App() {
 
               <aside className="experience-card">
                 <p className="eyebrow">Experience</p>
-                <h2>Professional enough for medical confidence, soft enough for patient comfort.</h2>
+                <h2>Experienced mobile phlebotomy with a comfort-first approach.</h2>
                 <p>
-                  This direction gives the page more warmth while still signaling clinical reliability,
-                  organized specimen handling, and a high standard of care.
+                  With decades of hands-on experience, Salina provides organized specimen collection
+                  with the professionalism patients, families, and care teams rely on.
                 </p>
 
                 <div className="experience-meta">
@@ -443,8 +437,8 @@ export default function App() {
             <div className="page-frame">
               <SectionHeading
                 eyebrow="How it works"
-                title="A simple process, presented in a calmer and more patient-friendly way."
-                copy="The flow is still clear and professional, but the styling feels less technical and more personal."
+                title="A simple process from scheduling to specimen handoff."
+                copy="Each visit is coordinated clearly so patients know what to expect and providers can trust the collection workflow."
                 align="center"
               />
 
@@ -465,8 +459,8 @@ export default function App() {
               <div>
                 <SectionHeading
                   eyebrow="Service area"
-                  title="Coverage stays clear, but the presentation feels lighter and more welcoming."
-                  copy="Grouped area cards and softer pills help the information scan quickly without feeling rigid."
+                  title="Serving Southern Colorado with additional visits by arrangement."
+                  copy="Coverage is centered in Colorado Springs and surrounding communities, with extended travel available for select Front Range appointments."
                 />
 
                 <div className="area-grid">
@@ -489,11 +483,11 @@ export default function App() {
               <aside className="bio-card">
                 <div className="bio-mark">SP</div>
                 <p className="eyebrow">About Salina</p>
-                <h2>Experience presented with warmth, not just authority.</h2>
+                <h2>Experienced, dependable care brought to you.</h2>
                 <p>
                   Salina Packer trained at the Phlebotomy Learning Center of Denver in 1999 and
-                  completed clinical externship work at St. Joseph Hospital. The tone here gives those
-                  credentials a more human, reassuring presentation.
+                  completed clinical externship work at St. Joseph Hospital. That background supports
+                  a mobile service centered on professionalism, patience, and respectful care.
                 </p>
 
                 <div className="chip-row">
@@ -503,6 +497,13 @@ export default function App() {
                     </span>
                   ))}
                 </div>
+
+                <div className="bio-actions">
+                  <a className="button button-secondary" href={CERTIFICATIONS_ROUTE}>
+                    <Icons.Shield />
+                    <span>View Certifications</span>
+                  </a>
+                </div>
               </aside>
             </div>
           </section>
@@ -511,8 +512,8 @@ export default function App() {
             <div className="page-frame faq-layout">
               <SectionHeading
                 eyebrow="Frequently asked questions"
-                title="The FAQ keeps its structure, but the overall feeling is softer and more hospitality-minded."
-                copy="This version is better for patients and families who want the service to feel approachable before they ever make contact."
+                title="Common questions, answered clearly."
+                copy="Everything patients, families, and care coordinators need to know before scheduling a mobile draw."
               />
 
               <div className="faq-list">
@@ -545,9 +546,9 @@ export default function App() {
                   <Icons.Phone />
                   <span>Call to Book</span>
                 </a>
-                <a className="button button-secondary" href={`mailto:${CONFIG.email}`}>
+                <a className="button button-secondary" href={AVAILABILITY_MAILTO}>
                   <Icons.Mail />
-                  <span>Email Inquiry</span>
+                  <span>Check Availability</span>
                 </a>
               </div>
             </div>
@@ -566,7 +567,8 @@ export default function App() {
 
             <div className="footer-links">
               <a href={CONFIG.phoneTel}>{CONFIG.phone}</a>
-              <a href={`mailto:${CONFIG.email}`}>{CONFIG.email}</a>
+              <a href={AVAILABILITY_MAILTO}>Check Availability</a>
+              <a href={CERTIFICATIONS_ROUTE}>Certifications</a>
             </div>
 
             <p className="footer-disclaimer">
@@ -583,9 +585,9 @@ export default function App() {
           <Icons.Phone />
           <span>Call</span>
         </a>
-        <a className="button button-secondary mobile-bar-button" href={`mailto:${CONFIG.email}`}>
+        <a className="button button-secondary mobile-bar-button" href={AVAILABILITY_MAILTO}>
           <Icons.Mail />
-          <span>Email</span>
+          <span>Availability</span>
         </a>
       </div>
     </>

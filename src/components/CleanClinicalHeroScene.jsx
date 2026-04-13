@@ -92,19 +92,21 @@ function createTree(x, z) {
 
 function createHouse(x, z, scale = 1) {
   const group = new THREE.Group();
+  const wallHeight = 0.72 * scale;
+  const roofHeight = 0.52 * scale;
 
   const wall = new THREE.Mesh(
-    new THREE.BoxGeometry(1.05 * scale, 0.72 * scale, 0.88 * scale),
+    new THREE.BoxGeometry(1.05 * scale, wallHeight, 0.88 * scale),
     new THREE.MeshStandardMaterial({ color: 0xf9f4ea, roughness: 0.84 }),
   );
-  wall.position.y = 0.36 * scale;
+  wall.position.y = wallHeight / 2;
   group.add(wall);
 
   const roof = new THREE.Mesh(
-    new THREE.ConeGeometry(0.78 * scale, 0.52 * scale, 4),
+    new THREE.ConeGeometry(0.78 * scale, roofHeight, 4),
     new THREE.MeshStandardMaterial({ color: 0xd39a72, roughness: 0.8 }),
   );
-  roof.position.y = 0.92 * scale;
+  roof.position.y = wallHeight + roofHeight / 2 + 0.04 * scale;
   roof.rotation.y = Math.PI / 4;
   group.add(roof);
 
