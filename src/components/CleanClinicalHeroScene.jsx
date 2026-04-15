@@ -328,20 +328,6 @@ export default function CleanClinicalHeroScene() {
       mapGroup.add(dash);
     }
 
-    const crosswalkMaterial = new THREE.MeshBasicMaterial({
-      color: 0xf6f5f0,
-      opacity: 0.78,
-      transparent: true,
-    });
-    [-0.24, -0.04, 0.16, 0.36].forEach((offset) => {
-      const stripe = new THREE.Mesh(
-        new THREE.BoxGeometry(0.54, 0.02, 0.08),
-        crosswalkMaterial,
-      );
-      stripe.position.set(3.25, 0.12, -0.56 + offset);
-      mapGroup.add(stripe);
-    });
-
     mapGroup.add(createHouse(-1.55, -1.85, 1));
     mapGroup.add(createHouse(-3.55, -1.95, 0.78));
     mapGroup.add(createHouse(-3.7, 1.85, 0.72));
@@ -359,18 +345,6 @@ export default function CleanClinicalHeroScene() {
       [5.15, 0.98],
     ].forEach(([x, z]) => {
       mapGroup.add(createTree(x, z));
-    });
-
-    const routeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x6ea79d,
-      opacity: 0.58,
-      transparent: true,
-    });
-
-    const routeAccentMaterial = new THREE.MeshBasicMaterial({
-      color: 0xd3a178,
-      opacity: 0.42,
-      transparent: true,
     });
 
     const homeArrivalCurve = new THREE.CatmullRomCurve3([
@@ -412,28 +386,6 @@ export default function CleanClinicalHeroScene() {
       new THREE.Vector3(5.15, 0.24, 0.62),
       new THREE.Vector3(6.4, 0.24, 0.62),
     ]);
-
-    const routeMeshOne = new THREE.Mesh(
-      new THREE.TubeGeometry(homeArrivalCurve, 120, 0.035, 12, false),
-      routeMaterial,
-    );
-    mapGroup.add(routeMeshOne);
-
-    const routeMeshTwo = new THREE.Mesh(
-      new THREE.TubeGeometry(cityForwardCurve, 160, 0.035, 12, false),
-      routeAccentMaterial,
-    );
-    mapGroup.add(routeMeshTwo);
-
-    const routeMeshThree = new THREE.Mesh(
-      new THREE.TubeGeometry(exitCurve, 60, 0.03, 12, false),
-      new THREE.MeshBasicMaterial({
-        color: 0x86b7ad,
-        opacity: 0.22,
-        transparent: true,
-      }),
-    );
-    mapGroup.add(routeMeshThree);
 
     const carGroup = new THREE.Group();
     const carBody = new THREE.Mesh(
